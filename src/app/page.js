@@ -1,9 +1,9 @@
 // app/page.js
+import Link from "next/link";
 export default function Home() {
   return (
-    <main>
-      <h1>Bienvenido a GoFastWeb</h1>
-      <p>Aquí encontrarás recursos y artículos sobre desarrollo de páginas web.</p>
+    <main className="p-6">
+      <h1 className="text-4xl font-bold mb-4">Go Fast Web</h1>
     </main>
   );
 }
