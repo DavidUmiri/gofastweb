@@ -74,13 +74,6 @@ const Contacto = () => {
           Enviar
         </button>
       </form>
-      <div className="mt-8">
-        <h2 className="text-lg font-semibold">Información de Contacto</h2>
-        <p className="text-gray-700">Teléfono: +34 644 03 23 29</p>
-        <p className="text-gray-700">Email: flomresvioleta@gmail.com</p>
-        <p className="text-gray-700">Dirección: Calle Cuesta 11</p>
-        <p className="text-gray-700">Sitio web: <a href="https://www.gofastweb.es" className="text-blue-500 hover:underline">gofastweb.es</a></p>
-      </div>
     </div>
   );
 };

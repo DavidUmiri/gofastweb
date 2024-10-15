@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../app/fonts/Urbanist-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Ajusta según los pesos disponibles */
+  font-style: normal; /* Estilo normal */
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../app/fonts/Urbanist-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Ajusta según los pesos disponibles */
+  font-style: italic; /* Estilo cursiva */
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,14 +34,9 @@
   }
 }
 
-body {
-  color: var(--textDark);
-  background: var(--backgroundLight);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+

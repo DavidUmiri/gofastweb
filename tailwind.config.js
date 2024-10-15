@@ -16,6 +16,9 @@ module.exports = {
         textDark: "#343a40",
         accent: "#ff6b6b"
       },
+      fontFamily: {
+        urbanist: ["Urbanist", "sans-serif"]
+      },
     },
   },
   plugins: [],
