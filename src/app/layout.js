@@ -66,19 +66,20 @@ m653 -356 c19 -18 25 -35 25 -65 0 -78 -45 -130 -112 -130 -66 0 -101 57 -79
 
             {/* Menú en el medio */}
             <nav className="flex-grow flex justify-center space-x-4 font-urbanist">
-              <Link href="/" className="text-white px-4 py-2 rounded" aria-label="Ir a la página de inicio">
+              <Link href="/" className="text-white px-4 py-2 rounded hover:bg-white hover:text-red-500 transition duration-300" aria-label="Ir a la página de inicio">
                 Inicio
               </Link>
-              <Link href="/nosotros" className="text-white px-4 py-2 rounded" aria-label="Ir a la página de nosotros">
+              <Link href="/nosotros" className="text-white px-4 py-2 rounded hover:bg-white hover:text-red-500 transition duration-300" aria-label="Ir a la página de nosotros">
                 Nosotros
               </Link>
-              <Link href="/servicios" className="text-white px-4 py-2 rounded" aria-label="Ir a la página de servicios">
+              <Link href="/servicios" className="text-white px-4 py-2 rounded hover:bg-white hover:text-red-500 transition duration-300" aria-label="Ir a la página de servicios">
                 Servicios
               </Link>
-              <Link href="/contacto" className="text-white px-4 py-2 rounded" aria-label="Ir a la página de contacto">
+              <Link href="/contacto" className="text-white px-4 py-2 rounded hover:bg-white hover:text-red-500 transition duration-300" aria-label="Ir a la página de contacto">
                 Contacto
               </Link>
             </nav>
+
 
             {/* Botón de contacto a la derecha */}
             <div className="flex-shrink-0 font-urbanist">
