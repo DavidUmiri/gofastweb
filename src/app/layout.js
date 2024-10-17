@@ -10,15 +10,16 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <header className="bg-primary sticky top-0 z-50">
-          <div className="flex justify-between items-center px-4 py-4">
+          <div className="flex justify-between items-center px-6 py-4">
             {/* Logo a la izquierda */}
             <div className="flex-shrink-0">
+
               <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                width="200.000000pt" height="50.000000pt" viewBox="0 0 500.000000 113.000000"
+                width="150.000000pt" height="50.000000pt" viewBox="0 0 500.000000 113.000000"
                 preserveAspectRatio="xMidYMid meet">
 
                 <g transform="translate(0.000000,113.000000) scale(0.100000,-0.100000)"
-                  fill="#E8E8E8" stroke="none">
+                  fill="white" stroke="none">
                   <path d="M4295 968 c-7 -43 -45 -307 -45 -316 0 -4 -14 10 -31 31 -48 58 -99
 80 -179 75 -55 -3 -78 -10 -119 -36 -29 -17 -54 -32 -56 -32 -2 0 19 55 46
 122 27 67 49 126 49 130 0 5 -34 8 -75 6 l-76 -3 -81 -205 c-94 -236 -86 -237
@@ -62,35 +63,36 @@ m653 -356 c19 -18 25 -35 25 -65 0 -78 -45 -130 -112 -130 -66 0 -101 57 -79
 -50 -21 -52 -19 -46 39 10 80 10 80 50 52 20 -13 44 -26 53 -29z"/>
                 </g>
               </svg>
+
             </div>
 
             {/* Menú en el medio */}
-            <nav className="flex-grow flex justify-center space-x-4 font-urbanist">
-              <Link href="/" className="text-white px-4 py-2 rounded hover:bg-white hover:text-red-500 transition duration-300" aria-label="Ir a la página de inicio">
-                Inicio
-              </Link>
-              <Link href="/nosotros" className="text-white px-4 py-2 rounded hover:bg-white hover:text-red-500 transition duration-300" aria-label="Ir a la página de nosotros">
-                Nosotros
-              </Link>
-              <Link href="/servicios" className="text-white px-4 py-2 rounded hover:bg-white hover:text-red-500 transition duration-300" aria-label="Ir a la página de servicios">
-                Servicios
-              </Link>
-              <Link href="/contacto" className="text-white px-4 py-2 rounded hover:bg-white hover:text-red-500 transition duration-300" aria-label="Ir a la página de contacto">
-                Contacto
-              </Link>
+            <nav className="flex-grow flex justify-center space-x-6 font-urbanist text-lg">
+              {['Inicio', 'Nosotros', 'Servicios', 'Contacto'].map((item, index) => (
+                <Link
+                  key={index}
+                  href={`/${item.toLowerCase()}`}
+                  className="text-white px-4 py-2 rounded hover:bg-white hover:text-red-500 transition duration-300"
+                  aria-label={`Ir a la página de ${item.toLowerCase()}`}>
+                  {item}
+                </Link>
+              ))}
             </nav>
-
 
             {/* Botón de contacto a la derecha */}
             <div className="flex-shrink-0 font-urbanist">
-              <Link href="/contacto" className="bg-white text-primary px-4 py-2 rounded" aria-label="Ir a la página de contacto">
+              <Link href="/contacto" className="bg-white text-primary px-4 py-2 rounded transition hover:bg-red-500 hover:text-white" aria-label="Contactar">
                 📞 +34 644 03 23 29
               </Link>
             </div>
           </div>
         </header>
-        <main>{children}</main>
-        <footer className="text-center py-4 bg-primary text-white font-urbanist">
+
+        <main className="bg-backgroundLight min-h-screen transition-colors duration-500">
+          {children}
+        </main>
+
+        <footer className="text-center py-4 bg-primary text-white font-urbanist text-sm">
           <p>© 2024 Go Fast Web. Todos los derechos reservados.</p>
         </footer>
       </body>
